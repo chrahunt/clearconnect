@@ -45,6 +45,5 @@ module ClearConnect
   def self.configure
     self.configuration ||= Configuration.new
     yield configuration
-    puts configuration.inspect
   end
 end
