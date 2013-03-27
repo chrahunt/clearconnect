@@ -1,6 +1,6 @@
 class SoapClient
   def initialize(username, password)
-    wsdl = HTTParty.get("https://agencymedia001.apihealthcare.com/flexnurse/wsdl/staffingWebService.wsdl", :format => 'xml').parsed_response
+    wsdl = HTTParty.get(ClearConnect.configuration.endpoints[:wsdl], :format => 'xml').parsed_response
     @client = Savon::Client.new(
       wsdl: wsdl, 
       ssl_verify_mode: :none,
@@ -11,7 +11,7 @@ class SoapClient
     @default_params = {
       :username => username,
       :password => password,
-      :resultType => 'json'
+      :resultType => ClearConnect.configuration.format.to_s
     }
   end
   

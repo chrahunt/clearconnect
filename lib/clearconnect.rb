@@ -10,6 +10,6 @@ module ClearConnect
 end
 
 require 'clearconnect/client'
-require 'clearconnect/config'
+require 'clearconnect/configuration'
 require 'clearconnect/rest_client'
 require 'clearconnect/soap_client'

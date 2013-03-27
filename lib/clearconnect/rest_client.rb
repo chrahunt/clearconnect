@@ -1,10 +1,11 @@
 class RestClient
   include HTTParty
-  base_uri "https://agencystaffing.apihealthcare.com/flexnurse/clearConnect/2_0/index.cfm"
-  default_params :resultType => 'json'
-  format :json
   
   def initialize(username, password)
+    self.class.base_uri ClearConnect.configuration.endpoints[:clearconnect]
+    self.class.default_params :resultType => ClearConnect.configuration.format.to_s
+    self.class.format ClearConnect.configuration.format
+    
     self.class.default_params :username => username, :password => password
   end
   

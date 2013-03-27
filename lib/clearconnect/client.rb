@@ -1,10 +1,10 @@
 module ClearConnect  
   class Client
-    def initialize(username = ClearConnect::Config.username, password = ClearConnect::Config.password)
+    def initialize(username = ClearConnect.configuration.username, 
+                   password = ClearConnect.configuration.password, 
+                   site_name = ClearConnect.configuration.site_name)
       @username = username
       @password = password
-      #@rest_client = RestClient.new(username, password)
-      #@soap_client = SoapClient.new(username, password)
     end
 
     def soap_client
