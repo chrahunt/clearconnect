@@ -1,4 +1,5 @@
 module ClearConnect
+  # the ClearConnect::Configuration class handles configuratio
   class Configuration
     attr_accessor \
       :username,
@@ -21,7 +22,7 @@ module ClearConnect
       @site_name = site_name
     end
 
-    # Does endpoints need to be set at any point?
+    # do endpoints need to be set at any point?
     def endpoints
       @endpoints ||= {
         clearconnect: "https://agencystaffing.apihealthcare.com/#{@site_name}/clearConnect/2_0/index.cfm",

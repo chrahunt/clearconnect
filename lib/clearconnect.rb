@@ -3,7 +3,9 @@ require 'savon'
 require 'xmlsimple'
 require 'json'
 
-# require other files
+# the clearconnect gem handles authentication and message passing between a 
+# Ruby/Rails application and the ClearConnect API offered by API Healthcare
+# as a supplement to their Contingent Staffing software.
 module ClearConnect
   class NoFunctionError < StandardError; end
   class AuthenticateError < StandardError; end
