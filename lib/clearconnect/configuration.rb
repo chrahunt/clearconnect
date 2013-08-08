@@ -4,7 +4,6 @@ module ClearConnect
       :username,
       :password,
       :site_name,
-      :endpoints,
       :mode,
       :format
 
