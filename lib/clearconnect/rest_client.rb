@@ -17,6 +17,7 @@ class RestClient
     self.class.get("", options)
   end
 
+  private
   # Turns arguments that are arrays into comma-delimited strings
   def normalize_query(query)
     query.each_pair do |param, arg|

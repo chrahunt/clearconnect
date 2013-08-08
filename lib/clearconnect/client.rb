@@ -6,12 +6,16 @@ module ClearConnect
   # on initialization.
   #
   # example:
-  #   client = ClearConnect::Client('username', 'password', 'sitename')
+  #   client = ClearConnect::Client.new('username', 'password', 'sitename')
   #   client.get(action: 'getOrders') # => array of orders
   class Client
     def initialize(username = ClearConnect.configuration.username, 
                    password = ClearConnect.configuration.password, 
                    site_name = ClearConnect.configuration.site_name)
+      # to ensure the endpoints are available
+      if !ClearConnect.configuration
+        ClearConnect.configure
+      end
       @username = username
       @password = password
     end
