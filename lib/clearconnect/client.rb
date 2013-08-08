@@ -14,7 +14,11 @@ module ClearConnect
                    site_name = ClearConnect.configuration.site_name)
       # to ensure the endpoints are available
       if !ClearConnect.configuration
-        ClearConnect.configure
+        ClearConnect.configure do |c|
+          c.username = username
+          c.password = password
+          c.site_name = site_name
+        end
       end
       @username = username
       @password = password
