@@ -58,6 +58,8 @@ module ClearConnect
 
   def self.configure
     self.configuration ||= Configuration.new
-    yield configuration
+    if block_given?
+      yield configuration
+    end
   end
 end
