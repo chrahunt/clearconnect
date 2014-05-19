@@ -3,7 +3,6 @@ class SoapClient
     wsdl = HTTParty.get(ClearConnect.configuration.endpoints[:wsdl], :format => 'xml').parsed_response
     @client = Savon::Client.new(
       wsdl: wsdl, 
-      ssl_verify_mode: :none,
       log_level: :info
     )
     @username = username
