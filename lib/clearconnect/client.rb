@@ -1,7 +1,8 @@
 module ClearConnect  
-  # the client class is the interface to the ClearConnect API.
+  ## 
+  # This class is the interface to the ClearConnect API.
   # 
-  # authentication can be managed via configuration (see the documentation for ClearConnect::Configuration)
+  # Authentication can be managed via configuration (see the documentation for ClearConnect::Configuration)
   # or by passing the username, password, and sitename for the Contingent Staffing user directly to the client
   # on initialization.
   #
