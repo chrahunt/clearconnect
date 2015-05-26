@@ -1,5 +1,5 @@
 class SoapClient
-  def initialize(username, password)
+  def initialize(username, password, session)
     wsdl = HTTParty.get(ClearConnect.configuration.endpoints[:wsdl], :format => 'xml').parsed_response
     @client = Savon::Client.new(
       wsdl: wsdl, 
@@ -7,6 +7,7 @@ class SoapClient
     )
     @username = username
     @password = password
+    @session = session
     @default_params = {
       :username => username,
       :password => password,

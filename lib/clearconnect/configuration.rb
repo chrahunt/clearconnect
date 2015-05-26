@@ -4,7 +4,7 @@ module ClearConnect
       :username,
       :password,
       :site_name,
-      :mode,
+      :session,
       :format
 
     def initialize
@@ -12,7 +12,7 @@ module ClearConnect
       @password = nil
       @site_name = nil
       @format = :json
-      @mode = :no_session
+      @session = false
       @endpoints = nil
     end
 
