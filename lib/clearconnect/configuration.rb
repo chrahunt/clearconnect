@@ -25,8 +25,8 @@ module ClearConnect
     #++
     def endpoints
       @endpoints ||= {
-        clearconnect: "https://agencystaffing.apihealthcare.com/#{@site_name}/clearConnect/2_0/index.cfm",
-        wsdl: "https://agencymedia001.apihealthcare.com/#{@site_name}/wsdl/staffingWebService.wsdl"
+        clearconnect: "https://ctms.contingenttalentmanagement.com/#{@site_name}/clearConnect/2_0/index.cfm",
+        wsdl: "https://media.healthcaresource.com/public/#{@site_name}/WSDL/staffingWebService.wsdl"
       }
     end
 
